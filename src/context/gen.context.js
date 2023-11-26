@@ -6,7 +6,11 @@ export const GentNumberProvider = ({ children }) => {
   const [number, setNumber] = useState([]);
 
   const generateNumber = (e) => {
-    const num = Math.floor(Math.random() * (9999 - 1000) + 1000).toString();
+    // print only 4 digits number
+     const num = Math.floor(Math.random() * (9999 - 1000) + 1000).toString();
+
+    // print max number and min number
+    // const num = Math.floor(Math.random() * 9999).toString();
 
     setNumber([...number, num]);
   };
